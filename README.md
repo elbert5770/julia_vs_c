@@ -21,7 +21,8 @@ julia> include("cell_locations_20240319_msh_ply_3D_views.jl")
 
 julia> include("cell_locations_20231013_msh_ply_3D_noinb.jl")
 
-13.3 seconds
+@time records: 13.3 seconds
 
-The conclusion is that with similar levels of optimization
+Conclusions
+In this example, Julia is not substantially slower than C when both are properly optimized.  Use of -O3 in C and @inbounds in Julia have a large impact on performance.
 
